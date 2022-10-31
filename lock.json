@@ -1,0 +1,12 @@
+{
+  "locks": [
+    {
+      "locator": "github.com/vijayee/Bitset.git",
+      "revision": "0.0.7"
+    },
+    {
+      "locator": "github.com/vijayee/Buffer.git",
+      "revision": "0.1.8"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "packages": [
+    "Bitset"
+  ],
+  "deps": [
+    {
+      "locator": "github.com/vijayee/Buffer.git",
+      "version": "0.1.8"
+    },
+    {
+      "locator": "github.com/vijayee/Bitset.git",
+      "version": "0.0.7"
+    }
+  ],
+  "info": {
+    "description": "Bitset implementation of a Fingerprint Bucket",
+    "homepage": "https://github.com/vijayee/Bitbucket",
+    "license": "GPLv3",
+    "documentation_url": "",
+    "version": "0.0.1",
+    "name": "Bitbucket"
+  }
+}
