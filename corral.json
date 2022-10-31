@@ -13,11 +13,11 @@
     }
   ],
   "info": {
-    "description": "Bitset implementation of a Fingerprint Bucket",
+    "description": "A Bitset implementation of a Fingerprint Bucket",
     "homepage": "https://github.com/vijayee/Bitbucket",
     "license": "GPLv3",
     "documentation_url": "",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "Bitbucket"
   }
 }

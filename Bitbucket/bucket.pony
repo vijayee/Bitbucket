@@ -88,7 +88,7 @@ class Bitbucket
 
 
   fun ref push(value: Fingerprint box)? =>
-    if full()? then
+    if full()? or (_data(_size.max(1) - 1)?) then
       let size' = _size + 1
       let bits = (_fpSize * size') + size'
       var bytes = bits / 8
