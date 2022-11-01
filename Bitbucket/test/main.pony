@@ -76,7 +76,6 @@ class iso _TestFingerprint is UnitTest
       end
       try
         for i in Range(0, bsize) do
-          t.log(i.string())
           t.assert_true(bb(i)? == fps(i)?)
         end
       else
@@ -114,7 +113,6 @@ class iso _TestFingerprint is UnitTest
 
       try
         for i in Range(0, fps.size()) do
-          t.log(i.string())
           t.assert_true(bb2(i)? == fps(i)?)
         end
       else
@@ -123,9 +121,28 @@ class iso _TestFingerprint is UnitTest
 
       try
         for i in Range(0, fps.size()) do
-          t.log(i.string())
           t.assert_true(bb(i)? == fps(i)?)
         end
       else
         t.fail("Bitbucket Fingerprint Error")
+      end
+
+      try
+        for i in Range(0, fps.size()) do
+          bb.delete(i)?
+          try
+            bb(i)?
+            t.fail("failed to delete fingerprint")
+          end
+        end
+      else
+        t.fail("Bitbucket Delete Fingerprint Error")
+      end
+
+      try
+        for fp in fps.values() do
+          t.assert_false(bb.contains(fp)?)
+        end
+      else
+        t.fail("Bitbucket Push Error")
       end
